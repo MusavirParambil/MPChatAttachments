@@ -11,8 +11,6 @@ import UIKit
 class MainCoordinator: Coordinator {
     var children = [Coordinator]()
     var navigationController: UINavigationController
-    var picker = UIImagePickerController()
-    var documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text", "com.apple.iwork.pages.pages", "public.data", "public.pdf"], in: .import)
 
     init(nav: UINavigationController) {
         self.navigationController = nav

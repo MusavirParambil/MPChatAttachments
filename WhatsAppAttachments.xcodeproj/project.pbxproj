@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D19ABB42646F2DA0088D0F6 /* AttachmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D19ABB32646F2DA0088D0F6 /* AttachmentsViewModel.swift */; };
 		3D5035022647BD3B002DC087 /* Attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5035012647BD3B002DC087 /* Attachments.swift */; };
-		3D5035092647C032002DC087 /* SentMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5035072647C032002DC087 /* SentMessageTableViewCell.swift */; };
-		3D50350A2647C032002DC087 /* SentMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D5035082647C032002DC087 /* SentMessageTableViewCell.xib */; };
-		3D5035142647C0C1002DC087 /* RecieveMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5035122647C0C1002DC087 /* RecieveMessageTableViewCell.swift */; };
-		3D5035152647C0C1002DC087 /* RecieveMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D5035132647C0C1002DC087 /* RecieveMessageTableViewCell.xib */; };
+		3D5035092647C032002DC087 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5035072647C032002DC087 /* MessageTableViewCell.swift */; };
+		3D50350A2647C032002DC087 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D5035082647C032002DC087 /* MessageTableViewCell.xib */; };
 		3D50351A2647CE06002DC087 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5035192647CE06002DC087 /* Coordinator.swift */; };
 		3D50352926482DE8002DC087 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D50352826482DE8002DC087 /* MainCoordinator.swift */; };
 		3D50352C26482DFC002DC087 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D50352B26482DFC002DC087 /* Storyboarded.swift */; };
@@ -26,10 +24,8 @@
 /* Begin PBXFileReference section */
 		3D19ABB32646F2DA0088D0F6 /* AttachmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentsViewModel.swift; sourceTree = "<group>"; };
 		3D5035012647BD3B002DC087 /* Attachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachments.swift; sourceTree = "<group>"; };
-		3D5035072647C032002DC087 /* SentMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessageTableViewCell.swift; sourceTree = "<group>"; };
-		3D5035082647C032002DC087 /* SentMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentMessageTableViewCell.xib; sourceTree = "<group>"; };
-		3D5035122647C0C1002DC087 /* RecieveMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieveMessageTableViewCell.swift; sourceTree = "<group>"; };
-		3D5035132647C0C1002DC087 /* RecieveMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecieveMessageTableViewCell.xib; sourceTree = "<group>"; };
+		3D5035072647C032002DC087 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		3D5035082647C032002DC087 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		3D5035192647CE06002DC087 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D50352826482DE8002DC087 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		3D50352B26482DFC002DC087 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -89,10 +85,8 @@
 		3D19ABB62646F41F0088D0F6 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				3D5035072647C032002DC087 /* SentMessageTableViewCell.swift */,
-				3D5035082647C032002DC087 /* SentMessageTableViewCell.xib */,
-				3D5035122647C0C1002DC087 /* RecieveMessageTableViewCell.swift */,
-				3D5035132647C0C1002DC087 /* RecieveMessageTableViewCell.xib */,
+				3D5035072647C032002DC087 /* MessageTableViewCell.swift */,
+				3D5035082647C032002DC087 /* MessageTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -207,8 +201,7 @@
 				3D8D00542635B3EB00AC79B1 /* LaunchScreen.storyboard in Resources */,
 				3D50353A2648423A002DC087 /* Main.storyboard in Resources */,
 				3D8D00512635B3EB00AC79B1 /* Assets.xcassets in Resources */,
-				3D50350A2647C032002DC087 /* SentMessageTableViewCell.xib in Resources */,
-				3D5035152647C0C1002DC087 /* RecieveMessageTableViewCell.xib in Resources */,
+				3D50350A2647C032002DC087 /* MessageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,14 +213,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D50351A2647CE06002DC087 /* Coordinator.swift in Sources */,
-				3D5035142647C0C1002DC087 /* RecieveMessageTableViewCell.swift in Sources */,
 				3D5035022647BD3B002DC087 /* Attachments.swift in Sources */,
 				3D50353226482F2A002DC087 /* AppDelegate.swift in Sources */,
 				3D8D004C2635B3EA00AC79B1 /* ViewController.swift in Sources */,
 				3D19ABB42646F2DA0088D0F6 /* AttachmentsViewModel.swift in Sources */,
 				3D50352C26482DFC002DC087 /* Storyboarded.swift in Sources */,
 				3D50352926482DE8002DC087 /* MainCoordinator.swift in Sources */,
-				3D5035092647C032002DC087 /* SentMessageTableViewCell.swift in Sources */,
+				3D5035092647C032002DC087 /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

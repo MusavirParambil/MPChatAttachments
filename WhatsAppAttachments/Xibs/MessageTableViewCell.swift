@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SentMessageTableViewCell: UITableViewCell {
+class MessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var messageLabel: UILabel!
     override func awakeFromNib() {
@@ -22,7 +22,7 @@ class SentMessageTableViewCell: UITableViewCell {
     }
 
     class func nib() -> UINib {
-        return UINib(nibName: SentMessageTableViewCell.getIdentifier(), bundle: nil)
+        return UINib(nibName: MessageTableViewCell.getIdentifier(), bundle: nil)
     }
     
 }

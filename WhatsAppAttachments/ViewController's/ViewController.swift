@@ -45,8 +45,7 @@ class ViewController: UIViewController, Storyboarded {
         viewModel = AttachmentViewModel(self)
         self.tableView.dataSource = viewModel
         self.tableView.delegate = viewModel
-        self.tableView.register(SentMessageTableViewCell.nib(), forCellReuseIdentifier: SentMessageTableViewCell.getIdentifier())
-        self.tableView.register(RecieveMessageTableViewCell.nib(), forCellReuseIdentifier: RecieveMessageTableViewCell.getIdentifier())
+        self.tableView.register(MessageTableViewCell.nib(), forCellReuseIdentifier: MessageTableViewCell.getIdentifier())
         viewModel?.setupMessageTextField(textField: messageTextField)
         viewModel?.mainCoodinator = mainCoodinator
     }

@@ -37,11 +37,6 @@ final class AttachmentViewModel: NSObject, UINavigationBarDelegate{
         NotificationCenter.default.addObserver(self, selector: #selector(hideKeyBoard), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    func setupPickerView() {
-        mainCoodinator?.documentPicker.delegate = self
-        mainCoodinator?.picker.delegate = self
-    }
-
     func sendMessage(message: String) {
         self.dataSource.append(message)
     }
@@ -62,16 +57,10 @@ final class AttachmentViewModel: NSObject, UINavigationBarDelegate{
     }
 
     // MARK: - Private methods
-    private func loadSentMessageTableViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: SentMessageTableViewCell.getIdentifier(), for: indexPath) as? SentMessageTableViewCell {
-            return cell
-        }
-
-        return UITableViewCell()
-    }
-
-    private func loadReciveMessageTableViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: RecieveMessageTableViewCell.getIdentifier(), for: indexPath) as? RecieveMessageTableViewCell {
+    private func loadMessageTableViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: MessageTableViewCell.getIdentifier(), for: indexPath) as? MessageTableViewCell {
+            cell.messageLabel.text = self.dataSource[indexPath.row]
+            cell.messageLabel.textAlignment = indexPath.row % 2 == .zero ? .left : .right
             return cell
         }
 
@@ -100,11 +89,7 @@ extension AttachmentViewModel: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row % 2 == .zero {
-            return loadReciveMessageTableViewCell(tableView, cellForRowAt: indexPath)
-        } else {
-            return loadSentMessageTableViewCell(tableView, cellForRowAt: indexPath)
-        }
+        return loadMessageTableViewCell(tableView, cellForRowAt: indexPath)
     }
 }
 
